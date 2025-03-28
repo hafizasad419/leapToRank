@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* Poppins */
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+
+@theme {
+  --font-display: "Poppins", sans-serif;
+  --color-c-orange: #dc7930;
+  --color-c-blue: #427bb4;
+  --color-c-green: #34906B;
+  --color-c-gray: #2A2D33;
+}
+
+
+body {
+  font-family: var(--font-display), Arial, Helvetica, sans-serif;
+}
+
+
+.smooth-hover-underline {
+  @apply relative text-white tracking-wide after:content-[''] after:absolute after:left-1/2 after:top-[calc(100%+8px)] after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-500 after:transform after:-translate-x-1/2 hover:after:w-full
+}
+
+
+
+.bg-img-shadow{
+  @apply before:content-[''] before:absolute before:inset-0 before:bg-black before:opacity-50
+}
+
+.btn-outline-gray{
+  @apply  text-center border border-white text-white py-4 px-8 rounded text-sm hover:bg-white hover:text-gray-900 transition duration-200 italic font-bold cursor-pointer
+}
+
+.mouse-icon {
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(197, 203, 210, 1);
+  border-radius: 24px;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  /* Ensures the dot doesn’t go outside */
+}
+
+.mouse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(197, 203, 210, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  animation: dropAnimation 1.5s infinite ease-in-out;
+}
+
+
+
+
+/* Animations */
+
+@keyframes dropAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  
+  20% {
+    transform: translateY(-5px);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}
