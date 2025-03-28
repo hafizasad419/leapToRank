@@ -130,6 +130,10 @@ body {
 }
 
 
+.nav-underline{
+  @apply relative text-white tracking-wide after:content-[''] after:absolute after:left-1/2 after:top-[calc(100%+8px)] after:h-[2px] after:bg-white after:transition-all after:duration-500 after:transform after:-translate-x-1/2 after:w-full
+}
+
 
 .bg-img-shadow{
   @apply before:content-[''] before:absolute before:inset-0 before:bg-black before:opacity-50
@@ -137,6 +141,10 @@ body {
 
 .btn-outline-gray{
   @apply  text-center border border-white text-white py-4 px-8 rounded text-sm hover:bg-white hover:text-gray-900 transition duration-200 italic font-bold cursor-pointer
+}
+
+.btn-primary{
+  @apply text-center  text-white py-4 px-8 rounded text-sm hover:bg-c-orange transition duration-200 italic font-bold cursor-pointer bg-c-gray
 }
 
 .mouse-icon {

@@ -1,4 +1,4 @@
-# $folders = "Services", "About", "Blog", "Contact"
+$folders = "BrandIdentityAndWeb"
 
 foreach ($folder in $folders) {
     # Create directory if it doesn't exist

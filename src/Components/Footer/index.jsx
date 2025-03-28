@@ -59,7 +59,7 @@ const Footer = () => {
         {/* Contact Form Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-center px-4">We can help. Let's chat.</h2>
-          <form onSubmit={handleContactSubmit} className="px-8 lg:px-24">
+          <form onSubmit={handleContactSubmit} className="px-4 lg:px-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <input
                 type="text"
@@ -107,7 +107,7 @@ const Footer = () => {
               required
             ></textarea>
             <div className="text-center">
-              <button type="submit" className="btn-outline-gray !px-12 hover:!bg-c-blue">
+              <button type="submit" className="btn-outline-gray">
                 Send
               </button>
             </div>
@@ -142,7 +142,7 @@ const Footer = () => {
               />
             </div>
             <div className="text-center">
-              <button type="submit" className="btn-outline-gray !px-12 hover:!bg-c-blue">
+              <button type="submit" className="btn-outline-gray">
                 Subscribe
               </button>
             </div>
