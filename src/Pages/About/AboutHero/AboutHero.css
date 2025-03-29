@@ -1,0 +1,16 @@
+/* Default styles for larger screens */
+.about-hero {
+    background-size: cover;
+    background-position: center left 100%;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+
+
+/* Adjustments for small screens (mobile) */
+@media (max-width: 640px) {
+    .about-hero {
+        background-size: 450%; /* Zoom in */
+        background-position: center left 85%; /* Focus on right part */
+    }
+}

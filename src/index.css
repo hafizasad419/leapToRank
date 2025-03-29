@@ -114,9 +114,11 @@
 @theme {
   --font-display: "Poppins", sans-serif;
   --color-c-orange: #dc7930;
+  /* --color-c-orange: #ffa500; */
   --color-c-blue: #427bb4;
   --color-c-green: #34906B;
   --color-c-gray: #2A2D33;
+  --color-c-sky-blue: #eef5fd;
 }
 
 

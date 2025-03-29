@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1000 140" fill="#44AF69">
+  <g transform="translate(0 0)" fill="rgba(45, 147, 108, 1.00)">
+    <path d="M0 35
+    C193 -26, 258 10, 502 64 S 717 -34, 1000 50
+    L1000 150 L0 150 Z"></path>
+  </g>
+
+  <g transform="translate(0 0)" fill="#44AF69">
+    <path d="M0 50
+    C223 2, 235 19, 500 65 S 761 12, 1000 50
+    L1000 140 L0 140 Z"></path>
+  </g>
+</svg>
