@@ -14,7 +14,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-
+<>
     <header>
       <nav className="bg-c-blue text-white fixed top-0 z-90 w-full">
         <div className="px-4 py-2 flex justify-between items-center">
@@ -57,6 +57,7 @@ const Header = () => {
             </button>
           </div>
         </div>
+         
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -80,7 +81,12 @@ const Header = () => {
           </div>
         )}
       </nav>
+
+      
     </header>
+
+
+</>
 
 
   );
