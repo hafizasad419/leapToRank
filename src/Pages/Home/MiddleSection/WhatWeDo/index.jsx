@@ -1,6 +1,6 @@
 const WhatWeDo = () => {
     return (
-      <section className="py-16 md:py-24 bg-leap-light">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <h2 className="text-3xl md:text-5xl font-bold text-c-orange mb-6">

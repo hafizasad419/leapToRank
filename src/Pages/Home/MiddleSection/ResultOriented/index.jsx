@@ -2,7 +2,7 @@ import spheresBg from './spheres-bg.svg';
 
 const ResultOriented = () => {
     return (
-        <section className="relative bg-leap-navy text-white overflow-hidden">
+        <section className="relative text-white overflow-hidden">
             {/* Curved effect at the top */}
             <div className="absolute top-0 left-0 w-full z-20">
                 <svg width="100%" viewBox="0 0 1000 64" fill="#ffffff">

@@ -122,8 +122,11 @@
 }
 
 
+
+
 body {
   font-family: var(--font-display), Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
 }
 
 
