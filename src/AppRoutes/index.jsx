@@ -7,10 +7,9 @@ import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 // import Blogs from '../Pages/Blogs/index-old';
 import BlogList from '../Pages/Blogs';
-import BrandIdentityAndWeb from '../Pages/Services/BrandIdentityAndWeb';
-import SoftwareAgility from '../Pages/Services/SoftwareAgility';
-import InnovationCapital from '../Pages/Services/InnovationCapital';
 import Page1 from '../Pages/Services/InnerServices/Page1';
+import Page2 from '../Pages/Services/InnerServices/Page2';
+import Page3 from '../Pages/Services/InnerServices/Page3';
 
 const AppRoutes = () => {
 
@@ -30,9 +29,12 @@ const AppRoutes = () => {
             path='/services'
             element={<Services />}
           />
-            <Route path="/services/brand-identity" element={<Page1 />} />
-            <Route path="/services/lean-agile" element={<SoftwareAgility />} />
-            <Route path="/services/innovation" element={<InnovationCapital />} />
+          <Route path="/services/brand-identity"
+            element={<Page1 />} />
+          <Route path="/services/lean-agile"
+            element={<Page2 />} />
+          <Route path="/services/innovation"
+            element={<Page3 />} />
 
           <Route
             path='/about'

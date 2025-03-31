@@ -1,0 +1,33 @@
+<svg class="item__svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <g class="customTimings" data-animation-path-duration="5000" data-animation-image-duration="5000"></g>
+        
+        <clipPath id="blob_stacks_in_498">
+            <path class="item__clippath path_1" d="M347.748092,123.664122 C394.465649,175.305344 449.198473,214.236641 449.312977,253.167939 C449.427481,292.21374 395.038168,331.374046 348.320611,358.282443 C301.603053,385.19084 262.442748,399.847328 203.587786,419.541985 C144.732824,439.236641 66.1832061,463.969466 29.4274809,437.061069 C-7.4427480899999985,410.152672 -2.63358779,331.603053 11.221374,266.793893 C24.9618321,202.099237 47.6335878,151.030534 84.389313,99.2748092 C121.259542,47.6335878 172.328244,-4.809160309999999 217.21374,1.2595419799999998 C262.099237,7.328244270000001 301.030534,71.9083969 347.748092,123.664122 Z" data-morph-path="M347.748092,123.664122 C394.465649,175.305344 449.198473,214.236641 449.312977,253.167939 C449.427481,292.21374 395.038168,331.374046 348.320611,358.282443 C301.603053,385.19084 262.442748,399.847328 203.587786,419.541985 C144.732824,439.236641 66.1832061,463.969466 29.4274809,437.061069 C-7.44274809,410.152672 -2.63358779,331.603053 11.221374,266.793893 C24.9618321,202.099237 47.6335878,151.030534 84.389313,99.2748092 C121.259542,47.6335878 172.328244,-4.80916031 217.21374,1.25954198 C262.099237,7.32824427 301.030534,71.9083969 347.748092,123.664122 Z" data-animation-path-duration="800" data-animation-path-easing="easeInOutCubic" data-path-elasticity="300" data-path-scalex="0.8" data-path-scaley="1.1" data-path-translatex="0" data-path-translatey="30" data-path-rotate="5" data-animation-image-duration="800" data-animation-image-easing="easeInOutQuart" data-image-elasticity="300" data-image-scalex="1.2" data-image-scaley="1.2" data-image-translatex="-20" data-image-translatey="-45" data-image-rotate="-5" data-animation-deco-duration="1300" data-animation-deco-easing="easeOutQuad" data-deco-elasticity="300" data-deco-scalex="0.8" data-deco-scaley="0.9" data-deco-translatex="-5" data-deco-translatey="-5" data-deco-rotate="2" style="transform: scaleX(0.8) scaleY(1.1) translateX(0px) translateY(30px) rotate(5deg);"></path>
+        </clipPath>
+        
+        <linearGradient id="blobgrad_stacks_in_498" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#eef5fd; stop-opacity:1.00"></stop>
+            <stop offset="100%" style="stop-color:#eef5fd; stop-opacity:1.00"></stop>
+        </linearGradient>
+
+        <linearGradient id="decograd_stacks_in_498" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:rgba(220, 220, 222, 1.00)"></stop>
+            <stop offset="100%" style="stop-color:rgba(205, 205, 205, 1.00)"></stop>
+        </linearGradient>
+        
+        <!-- Decoration pattern -->
+        <pattern id="no-dec-bg" width="10" height="10" patternUnits="userSpaceOnUse">
+            <rect width="10" height="10" fill="none"/>
+        </pattern>
+    </defs>
+
+    <g class="item__deco" fill="url(#decograd_stacks_in_498)" style="transform: scaleX(0.8) scaleY(0.9) translateX(-5px) translateY(-5px) rotate(2deg);">
+        <use xlink:href="#no-dec-bg"></use>
+    </g>
+    
+    <g clip-path="url(#blob_stacks_in_498)">
+        <rect class="item__img_bg" width="500" height="500" fill="url(#blobgrad_stacks_in_498)"></rect>
+        <image class="item__img" xlink:href="/api/placeholder/500/500" x="0" y="0" height="100%" width="100%" style="transform: scaleX(1.2) scaleY(1.2) translateX(-20px) translateY(-45px) rotate(-5deg);"></image>
+    </g>
+</svg>
