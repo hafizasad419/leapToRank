@@ -142,6 +142,14 @@ body {
   @apply text-center text-white py-4 px-8 rounded text-sm hover:bg-c-orange transition duration-200 italic font-bold cursor-pointer bg-c-gray
 }
 
+/* Error and Success Messages */
+.error-message{
+  @apply bg-red-100 text-red-700 p-4 rounded-xl my-6 text-center mx-auto max-w-lg font-bold
+}
+.success-message{
+  @apply bg-green-100 text-green-900 p-4 rounded-xl my-6 text-center mx-auto max-w-lg font-bold
+}
+
 .mouse-icon {
   width: 26px;
   height: 42px;
