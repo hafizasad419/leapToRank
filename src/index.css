@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Poppins */
 .poppins-thin {
@@ -110,23 +112,11 @@
 }
 
 
-
-@theme {
-  --font-display: "Poppins", sans-serif;
-  --color-c-orange: #dc7930;
-  /* --color-c-orange: #ffa500; */
-  --color-c-blue: #427bb4;
-  --color-c-green: #34906B;
-  --color-c-gray: #2A2D33;
-  --color-c-sky-blue: #eef5fd;
-}
-
-
-
-
 body {
-  font-family: var(--font-display), Arial, Helvetica, sans-serif;
-  background-color: #ffffff
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #374151;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -135,21 +125,21 @@ body {
 }
 
 
-.nav-underline{
+.nav-underline {
   @apply relative text-white tracking-wide after:content-[''] after:absolute after:left-1/2 after:top-[calc(100%+8px)] after:h-[2px] after:bg-white after:transition-all after:duration-500 after:transform after:-translate-x-1/2 after:w-full
 }
 
 
-.bg-img-shadow{
+.bg-img-shadow {
   @apply before:content-[''] before:absolute before:inset-0 before:bg-black before:opacity-50
 }
 
-.btn-outline-gray{
-  @apply  text-center border border-white text-white py-4 px-8 rounded text-sm hover:bg-white hover:text-gray-900 transition duration-200 italic font-bold cursor-pointer
+.btn-outline-gray {
+  @apply text-center border border-white text-white py-4 px-8 rounded text-sm hover:bg-white hover:text-gray-900 transition duration-200 italic font-bold cursor-pointer
 }
 
-.btn-primary{
-  @apply text-center  text-white py-4 px-8 rounded text-sm hover:bg-c-orange transition duration-200 italic font-bold cursor-pointer bg-c-gray
+.btn-primary {
+  @apply text-center text-white py-4 px-8 rounded text-sm hover:bg-c-orange transition duration-200 italic font-bold cursor-pointer bg-c-gray
 }
 
 .mouse-icon {
@@ -187,7 +177,7 @@ body {
     opacity: 0;
     transform: translateY(0);
   }
-  
+
   20% {
     transform: translateY(-5px);
   }

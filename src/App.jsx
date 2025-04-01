@@ -5,6 +5,9 @@ import { BrowserRouter } from "react-router-dom"
 
 function App() {
 
+  if (typeof window !== 'undefined') {
+    document.documentElement.classList.remove('dark'); // Remove dark mode if it was accidentally set
+  }
 
   return (
     <>
@@ -12,9 +15,9 @@ function App() {
         <Header />
         <h1 className="bg-white text-center mt-20 py-8 lg:hidden text-3xl text-c-blue font-extrabold">LEAP TO RANK</h1>
         <div
-        className="lg:mt-20"
+          className="lg:mt-20"
         >
-        <AppRoutes />
+          <AppRoutes />
         </div>
         <Footer />
       </BrowserRouter>

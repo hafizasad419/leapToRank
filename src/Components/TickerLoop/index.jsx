@@ -38,7 +38,7 @@ export default function TickerLoop({ cards }) {
     }, [controls, cards]);
 
     return (
-        <div className="overflow-hidden w-full py-8">
+        <div className="overflow-hidden w-full py-8 bg-c-blue">
             <motion.div
                 ref={containerRef}
                 className="flex space-x-6 w-max"

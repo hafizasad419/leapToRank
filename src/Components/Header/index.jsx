@@ -16,7 +16,7 @@ const Header = () => {
   return (
 <>
     <header>
-      <nav className="bg-c-blue text-white fixed top-0 z-90 w-full">
+      <nav className="bg-c-blue text-white fixed top-0 z-[90] w-full">
         <div className="px-4 py-2 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -42,7 +42,7 @@ const Header = () => {
 
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden z-100">
+          <div className="lg:hidden z-[100]">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="focus:outline-none">
               {isMenuOpen ? <X size={42} /> :
 
