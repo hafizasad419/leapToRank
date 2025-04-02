@@ -2,11 +2,28 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Twitter, Instagram, Facebook, Linkedin, Mail } from "lucide-react";
 import LogoAnimation from "./LogoAnimation";
-import { useForm, ValidationError } from '@formspree/react';
 
 const Footer = () => {
-  const [contactForm, handleContactSubmit, resetContactForm] = useForm("meoalbbg");
-  const [newsletterForm, handleNewsletterSubmit, resetNewsletterForm] = useForm("xnnpbejw");
+  const [contactData, setContactData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    role: "",
+    message: ""
+  });
+
+  const [newsletterData, setNewsletterData] = useState({
+    firstName: "",
+    email: ""
+  });
+
+  const handleContactChange = (e) => {
+    setContactData({ ...contactData, [e.target.name]: e.target.value });
+  };
+
+  const handleNewsletterChange = (e) => {
+    setNewsletterData({ ...newsletterData, [e.target.name]: e.target.value });
+  };
 
   // Error and success message handling
   const renderMessage = (status, type) => {
@@ -33,18 +50,14 @@ const Footer = () => {
         {/* Contact Form Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold mb-6 text-center px-4">We can help. Let's chat.</h2>
-          <form onSubmit={(e) => {
-            e.preventDefault(); // Prevent the default form submission behavior
-            handleContactSubmit(e)
-            resetContactForm()
-          }}
-            className="px-4 lg:px-24">
+          <form action="https://formspree.io/f/meoalbbg" method="POST" className="px-4 lg:px-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <input
                 type="text"
                 name="name"
                 placeholder="Name"
-                value={contactForm.name}
+                value={contactData.name}
+                onChange={handleContactChange}
                 className="bg-c-gray ring-gray-600 ring-1 p-3 rounded"
                 required
               />
@@ -52,7 +65,8 @@ const Footer = () => {
                 type="email"
                 name="email"
                 placeholder="Email address"
-                value={contactForm.email}
+                value={contactData.email}
+                onChange={handleContactChange}
                 className="bg-c-gray ring-gray-600 ring-1 p-3 rounded"
                 required
               />
@@ -62,21 +76,24 @@ const Footer = () => {
                 type="text"
                 name="company"
                 placeholder="Company"
-                value={contactForm.company}
+                value={contactData.company}
+                onChange={handleContactChange}
                 className="bg-c-gray ring-gray-600 ring-1 p-3 rounded"
               />
               <input
                 type="text"
                 name="role"
                 placeholder="Role at company (optional)"
-                value={contactForm.role}
+                value={contactData.role}
+                onChange={handleContactChange}
                 className="bg-c-gray ring-gray-600 ring-1 p-3 rounded"
               />
             </div>
             <textarea
               name="message"
               placeholder="Tell us about your goals and how we can help you reach them."
-              value={contactForm.message}
+              value={contactData.message}
+              onChange={handleContactChange}
               className="bg-c-gray ring-gray-600 ring-1 p-3 rounded w-full mb-4 h-32"
               required
             ></textarea>
@@ -85,7 +102,6 @@ const Footer = () => {
                 Send
               </button>
             </div>
-            {renderMessage(contactForm, 'contact')}
           </form>
         </div>
 
@@ -96,24 +112,22 @@ const Footer = () => {
             Get expert brand, marketing, and technology tips and news delivered straight to your inbox. We won't spam
             you or share your email address with affiliates.
           </p>
-          <form onSubmit={(e) => {
-            e.preventDefault();
-            handleNewsletterSubmit(e);
-            resetNewsletterForm();
-          }} className="max-w-md mx-auto">
+          <form action="https://formspree.io/f/xnnpbejw" method="POST" className="max-w-md mx-auto">
             <div className="grid grid-cols-1 gap-4 mb-4">
               <input
                 type="text"
                 name="firstName"
                 placeholder="First name (optional)"
-                value={newsletterForm.firstName}
+                value={newsletterData.firstName}
+                onChange={handleNewsletterChange}
                 className="bg-c-gray ring-gray-600 ring-1 p-3 rounded"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Email address"
-                value={newsletterForm.email}
+                value={newsletterData.email}
+                onChange={handleNewsletterChange}
                 className="bg-c-gray ring-gray-600 ring-1 p-3 rounded"
                 required
               />
@@ -123,29 +137,16 @@ const Footer = () => {
                 Subscribe
               </button>
             </div>
-            {renderMessage(newsletterForm, 'newsletter')}
           </form>
         </div>
 
         {/* Social Media Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">Social media.</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Get in touch.</h2>
           <div className="flex justify-center mt-16 space-x-3 lg:space-x-6">
             <a href="mailto:leaptorank@gmail.com?subject=We%20are%20interested%20in%20your%20services&body=Hello,%0A%0AI%20am%20reaching%20out%20to%20inquire%20about%20your%20services.%20Please%20let%20me%20know%20how%20we%20can%20collaborate.%0A%0AThank%20you!"
               target="_blank" rel="noopener noreferrer" className="bg-gray-600 w-12 h-12 flex items-center justify-center border border-gray-400 rounded-full hover:bg-c-blue transition-all">
               <Mail className="w-6 h-6 text-white" />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-gray-600 w-12 h-12 flex items-center justify-center border border-gray-400 rounded-full hover:bg-c-blue transition-all">
-              <Twitter className="w-6 h-6 text-white" />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-gray-600 w-12 h-12 flex items-center justify-center border border-gray-400 rounded-full hover:bg-c-blue transition-all">
-              <Instagram className="w-6 h-6 text-white" />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-gray-600 w-12 h-12 flex items-center justify-center border border-gray-400 rounded-full hover:bg-c-blue transition-all">
-              <Facebook className="w-6 h-6 text-white" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-gray-600 w-12 h-12 flex items-center justify-center border border-gray-400 rounded-full hover:bg-c-blue transition-all">
-              <Linkedin className="w-6 h-6 text-white" />
             </a>
           </div>
         </div>
@@ -156,18 +157,6 @@ const Footer = () => {
         {/* Copyright and Links */}
         <div className="text-center text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} LEAP TO RANK LLC</p>
-          <div className="mt-2 space-x-4">
-            <Link to="/" className="hover:text-gray-400">
-              Privacy policy
-            </Link>
-            <Link to="/" className="hover:text-gray-400">
-              Site map
-            </Link>
-            <Link to="/" className="hover:text-gray-400">
-              Client portal
-            </Link>
-          </div>
-          <p className="my-4">Made with ❤️ in California</p>
         </div>
       </div>
     </footer>
